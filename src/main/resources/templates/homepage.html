@@ -1,0 +1,599 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+            crossorigin="anonymous">
+        <script
+            src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+            crossorigin="anonymous"></script>
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        .nav-link a{
+            color: #0F1419;
+            text-decoration: none;
+            
+            font-size: 20px;
+        }
+        .fs-12-6{
+            font-size: 12.6px;
+        }
+        .fs-12{
+            font-size: 12px;
+        }
+        .fs-16{
+            font-size: 16px;
+        }
+        .custom-input {
+            border: none;
+            outline: none; 
+        }
+        .custom-input:focus {
+            border: none; 
+            outline: none; 
+            box-shadow: none;
+        }
+        .bg-gray{
+            background-color: #F1F1F1;
+        }
+        .text-gray{
+            color: #6E7191;
+        }
+        .color-web{
+            color: #1D9BF0;
+        } 
+        .rounded-4{
+            border-radius: 12px;
+        }
+        .menu-links {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        }
+        
+        .menu-item {
+            padding: 10px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .menu-item a {
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+        }
+        .menu-item span {
+            margin-left: 2rem;
+        }
+        .icon-box {
+            width: 24px;
+        }
+        .menu-item a.active {
+            color: #1D9BF0;
+        }
+        
+        .menu-item a:hover {
+            color: #1D9BF0;
+        }
+        
+        .menu-item a.active {
+            transition: transform 0.3s ease;
+        }
+        .navbar-nav li:hover{
+            color: #1D9BF0;
+        }
+        .body-container {
+            gap: 36px;
+        }
+        body{
+            background-color: #F8F8F8;
+        }
+        .btn-web{
+            background-color: #1D9BF0;
+            color: white;
+        }
+        .navbar-container{
+            padding: 0px 419px 0px 369px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white shadow" >
+        <div class="container navbar-container d-flex py-3 justify-content-between">
+            <div>
+                <a class="navbar-brand d-flex align-items-center gap-2" href="#">
+                    <img src="/images/logo-tomiru.png" style="width: 29px; height: 42px;">
+                    <img src="/images/logo-text.png" style="height: 20px;">
+                </a>
+            </div>
+            <div class="collapse navbar-collapse gap-4">
+                <div>
+                    <form class="d-flex align-items-center rounded-pill border-2 bg-gray" style="width: 284px;height: 42px">
+                        <div class="px-2">
+                            <i class="fas fa-search icon px-2"></i>
+                            <input class="border-0 bg-gray custom-input" type="search" name="query" placeholder="Tìm kiếm trên Tomiru">
+                        </div>
+                    </form>
+                </div>
+                <div class="">
+                    <ul class="navbar-nav gap-4">
+                        <li role="button" class="nav-item text-gray text-center">
+                            <i class="fa-solid fa-brain fs-4"></i>
+                            <a class="nav-link p-0" href="#">Dịch vụ KH</a>
+                        </li>
+                        <li role="button" class="nav-item text-gray text-center">
+                            <i class="fa-solid fa-envelope fs-4"></i>
+                            <a class="nav-link p-0" href="#">Hòm thư</a>
+                        </li>
+                        <li role="button" class="nav-item text-gray text-center">
+                            <i class="fa-solid fa-bell fs-4"></i>
+                            <a class="nav-link p-0" href="#">Thông báo</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div>
+                <a role="button" class="d-flex align-items-center gap-5 " href="/html/menu.html">
+                    <div  class="nav-item d-flex align-items-center gap-3" >
+                        <img class="rounded-circle avatar-image" src="/images/avt.jpg" style="height: 42px" alt="avatar">
+                        <div class="d-flex flex-column">
+                            <a  class="fw-bold text-dark text-decoration-none" >Nguyễn Văn Huân</a>
+                            <span>@NguyenVanA</span>
+                        </div>
+                    </div>
+                    <div class="btn-group">
+                        <button type="button" class="btn dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">...
+                        </button>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">a</a></li>
+                            <li><a class="dropdown-item" href="#">a</a></li>
+                            <li><a class="dropdown-item" href="#">a</a></li>
+                        </ul>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </nav>
+    <div class="container body-container p-5 d-flex justify-content-between">
+        <!-- Menu -->
+        <aside class="menu" style="max-width: 284px;">
+            <div class=" d-flex flex-column align-items-center rounded-3 p-3 bg-white">
+                <ul class="menu-links">
+                    <!-- Menu items -->
+                    <li role="button" class="list nav-link menu-item">
+                        <a class="active" href="#">
+                            <div class="icon-box">
+                                <i class="fa-solid fa-house"></i>
+                            </div>
+                            <span class="text navtext">Trang chủ</span>
+                        </a>
+                    </li>
+                    <li role="button" class="list nav-link menu-item">
+                        <a class="" href="#">
+                            <div class="icon-box">
+                                <i class="fa-regular fa-compass"></i>
+                            </div>
+                            <span class="text navtext">Khám phá</span>
+                        </a>
+                    </li>
+                    <li role="button" class="list nav-link menu-item">
+                        <a class="" href="#">
+                            <div class="icon-box">
+                                <i class="fa-solid fa-user-group"></i>
+                            </div>
+                            <span class="text navtext">Nhóm của tôi</span>
+                        </a>
+                    </li>
+                    <li role="button" class="list nav-link menu-item">
+                        <a class="" href="#">
+                            <div class="icon-box">
+    
+                                <i class="fa-solid fa-cart-shopping"></i>
+                            </div>
+                            <span class="text navtext">Cửa hàng</span>
+                        </a>
+                    </li>
+                    <li role="button" class="list nav-link menu-item">
+                        <a class="" href="#">
+                            <div class="icon-box">
+    
+                                <i class="fa-solid fa-map-location-dot"></i>
+                            </div>
+                            <span class="text navtext">Bản đồ</span>
+                        </a>
+                    </li>
+                    <li role="button" class="list nav-link menu-item">
+                        <a class="" href="#">
+                            <div class="icon-box">
+    
+                                <i class="fa-solid fa-magnifying-glass"></i>
+                            </div>
+                            <span class="text navtext">Tìm kiếm</span>
+                        </a>
+                    </li>
+                    <li role="button" class="list nav-link menu-item">
+                        <a class="" href="#">
+                            <div class="icon-box">
+    
+                                <i class="fa-solid fa-share-nodes"></i>
+                            </div>
+                            <span class="text navtext">Mạng lưới</span>
+                        </a>
+                    </li>
+                    <li role="button" class="list nav-link menu-item">
+                        <a class="" href="#">
+                            <div class="icon-box">
+    
+                                <i class="fa-solid fa-sack-dollar"></i>
+                            </div>
+                            <span class="text navtext">Quỹ đồng chia</span>
+                        </a>
+                    </li>
+                    <li role="button" class="list nav-link menu-item">
+                        <a class="" href="#">
+                            <div class="icon-box">
+    
+                                <i class="fa-regular fa-user"></i>
+                            </div>
+                            <span class="text navtext">Trang cá nhân</span>
+                        </a>
+                    </li>
+                    <li role="button" class="list nav-link menu-item">
+                        <a class="" href="#">
+                            <div class="icon-box">
+    
+                                <i class="fa-regular fa-file-lines"></i>
+                            </div>
+                            <span class="text navtext">Tài liệu SP</span>
+                        </a>
+                    </li>
+                    <li role="button" class="list nav-link menu-item">
+                        <a class="" href="#">
+                            <div class="icon-box">
+                                <i class="fa-regular fa-clone"></i>
+                            </div>
+                            <span class="text navtext">Link mời khách</span>
+                        </a>
+                    </li>
+                </ul>
+                <button class="btn btn-primary rounded-pill px-5 w-75 my-4">Đăng bài</button>
+            </div>
+        </aside>
+        <!-- Post -->
+        <div class="post-container d-flex flex-column gap-3" style="max-width: 540px;">
+            <div class="write-post d-flex bg-white p-3 rounded-4">
+                <div class="py-1">
+                    <img class="rounded-pill img-thumbnail avatar-image" src="/images/avt.jpg" style="height: 48px" alt="avatar">
+                </div>
+                <div class="flex-grow-1">
+                    <div class="d-flex align-items-center">
+                        <div role="button" class="d-flex align-items-center w-100">
+                            <!-- Button trigger modal -->
+                            <div class="border-bottom w-100 pb-2">
+                                <button role="button" class="btn border-none rounded-pill w-100 d-flex align-items-center opacity-50" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                                    <span class="flex-grow-1 text-start">Đăng bài viết, hoặc Video  </span> 
+                                    <span class="btn btn-web rounded-pill px-4 py-1">Đăng bài</span>
+                                </button>
+                            </div>
+                            <!-- Modal -->
+                            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-lg">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <div class="modal-title flex-grow-1 d-flex align-content-center">
+                                            <div class="d-flex align-items-center">
+                                                <img class="rounded-circle" src="/images/avt.jpg" style="height: 54px" alt="avatar">
+                                            </div>
+                                            <div class="d-flex flex-column px-2">
+                                                <span class="fw-bold">Nguyễn Huân</span>
+                                            </div>
+                                        </div>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <input class="w-100 border-none" placeholder="Đăng cập nhật trạng thái"></input>
+                                        <label for="fileInput" role="button" class="fa-regular fa-image fs-2 border-0 text-primary bg-white"></label>
+                                        <input class="d-none" type="file" id="fileInput" accept="images/*"></input>
+                                    </div>
+                                    <div class="text-center">
+                                        <img class="w-50 h-50" id="imagePreview" src="" alt="Image Preview">
+                                    </div>
+                                    <div class="modal-footer">
+                                    <button type="button" class="btn btn-primary w-100">Đăng</button>
+                                    </div>
+                                </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <button type="button" class="fa-regular fa-image fs-5 mt-3 border-0 text-primary bg-white"></button>
+                </div>
+
+            </div>
+            <div class="filter-button d-flex align-items-center flex-row-reverse gap-1">
+                <i class="fa-solid fa-sliders"></i>
+                <span>Lọc</span>
+            </div>
+            <div class="list-post bg-white" >
+                <div class="post">
+                    <div>
+                        <div class="avt-container">
+                            <ul class="nav nav-tabs nav-justified">
+                                <li class="nav-item">
+                                    <a class="nav-link active" data-bs-toggle="tab" href="#home">Dành cho bạn</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" data-bs-toggle="tab" href="#menu1">Nhóm của tôi</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" data-bs-toggle="tab" href="#menu2">Tin tức</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="tab-content"> 
+                            <div class="tab-pane container active p-3" id="home">
+                                <div class="post-owner d-flex align-content-center mb-3 py-2">
+                                    <div class="flex-grow-1 d-flex align-content-center">
+                                        <div class="d-flex align-items-center">
+                                            <img class="rounded-circle" src="/images/avt.jpg" style="height: 54px" alt="avatar">
+                                        </div>
+                                        <div class="d-flex flex-column px-2">
+                                            <a role="button" class="fw-bold text-dark text-decoration-none" href="/html/menu.html">Nguyễn Huân</a>
+                                            <span class="fs-12">Môi giới tại Cenhomes.vn</span>
+                                            <span class="fs-12">2 ngày trước</span>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <span class="fs-1 text-warning" role="button" href="">...</span>
+                                    </div>
+                                </div>
+                                <div class="post-content d-flex flex-column gap-3 border-bottom border-top">
+                                    <div class="content">
+                                        <span role="text" name="" id="">
+                                            Mục tiêu giúp bạn định hướng rõ ràng, rèn luyện sự tập trung, và không ngừng sáng tạo để vượt qua giới hạn và đạt được kết quả mong muốn. Khi nghĩ tới việc đặt mục tiêu, chúng ta sẽ nghĩ ngay tới kết quả cuối cùng - hay còn gọi là 
+                                        </span>
+                                        <a href="">xem thêm</a>
+                                    </div>
+                                    <div class="media">
+                                        <img class="w-100" src="/images/avt.jpg" alt="avatar">
+                                    </div>
+                                </div>
+                                <div class="reaction">
+                                    <div class="btn-group">
+                                        <button class="btn">
+                                            <i class="fa-solid fa-thumbs-up"></i>
+                                            <span>Thích</span>
+                                            <span>(32)</span>
+                                        </button>
+                                        <button class="btn">
+                                            <i class="fa-regular fa-comment-dots"></i>
+                                            <span>Trả lời</span>
+                                            <span>(24)</span>
+                                        </button>
+                                        <button class="btn">
+                                            <i class="fa-solid fa-share"></i>
+                                            <span>Chia sẻ</span>
+                                            <span>(5)</span>
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="comment">
+                                    <span class="d-flex align-items-center flex-row-reverse" role="button"> 
+                                        <span>Tất cả bình luận </span>
+                                        <i class="fa-solid fa-chevron-down p-2"></i>
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="tab-pane container fade" id="menu1">...</div>
+                            <div class="tab-pane container fade" id="menu2">...</div>
+                        </div>
+    
+                        <div></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Right content -->
+        <div class="right-container d-flex flex-column gap-4" style="max-width: 314px;">
+            <!-- Transaction -->
+            <aside class="transaction-container d-flex flex-column rounded-4 gap-3 p-3 bg-white">
+                <div class="tomxu">
+                    <div class="d-flex align-items-center color-web fs-6 gap-1" for="">
+                        <span class="fw-bold">TOMXU</span>
+                        <img class="" src="/images/logo-tomiru.png" style="width: 10px; height: 16px;">
+                    </div>
+                    <div class="d-flex align-items-center justify-content-between">
+                        <span id="tomXu" data-original-text="1,123.12" class="fw-bold flex-grow-1 fs-3">*******</span>
+                        <i role="button" onclick="toggleTomXu('tomXu', this)" class="hidden-btn fa-regular fa-eye"></i>
+                    </div>
+                </div>
+                <div class="p-tomxu">
+                    <div class="d-flex align-items-center fs-6 gap-1" for="">
+                        <span class="fw-bold color-web">pTOMXU</span>
+                        <img src="/images/logo-tomiru.png" style="width: 10px; height: 16px;">
+                        <span class="text-secondary fs-6">
+                            <span class="badge text-gray" data-bs-toggle="tooltip" title="pTomxu is a type of money that I don't know what it is :vvv">(Chi tiết)
+                            </span>
+                        </span>
+                    </div>
+                    <div class="d-flex align-items-center justify-content-between">
+                        <span  id="pTomXu" data-original-text="1,123.12" class="fw-bold flex-grow-1 fs-3">*******</span>
+                        <i role="button" onclick="toggleTomXu('pTomXu', this)" class="hidden-btn fa-regular fa-eye"></i>
+                    </div>
+                </div>
+                <div class="d-flex align-content-center gap-4">
+                    <button class="btn btn-dark rounded-pill w-50">
+                        <span>Chuyển</span> 
+                        <i class="fa-solid fa-share"></i>
+                    </button>
+                    <button class="btn btn-dark rounded-pill w-50">
+                        <span>Nhận</span> 
+                        <i class="fa-solid fa-download"></i>
+                    </button>
+                </div>
+                <div class="d-flex flex-column gap-3">
+                    <button class="btn btn-outline-primary rounded-pill">
+                        <i class="fa-solid fa-clock-rotate-left"></i>
+                        <span>Lịch sử giao dịch</span>
+                    </button>
+                    <button class="btn btn-outline-primary rounded-pill">
+                        <i class="fa-solid fa-arrows-rotate"></i>
+                        <span>Trao đổi Tomxu</span>
+                    </button>
+                </div>
+            </aside>
+            <!-- Tomxu attendance -->
+            <aside class="attendance d-flex flex-column p-3 gap-4 rounded-4 bg-white">
+                <div class="d-flex align-items-center ">
+                    <i class="fa-solid fa-calendar-days"></i>
+                    <span class="px-4">Điểm danh nhận TOMXU</span>
+                </div>
+                <button class="btn btn-primary rounded-pill">Nhận ngay 3 TOMXU</button>
+            </aside>
+            <!-- Activities -->
+            <aside class="new-activities p-3 bg-white">
+                <table class="table table-hover">
+                    <thead>
+                        <tr>
+                            <th class="" scope="col">
+                                <span>Các hoạt động</span>
+                                <span>mới nhất</span>
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="acticity-container">
+                        <td class="d-flex align-items-center gap-2">
+                            <div>
+                                <img class="rounded-circle" src="/images/avt.jpg" style="height: 42px" alt="avatar">
+                            </div>
+                            <div>
+                                <div>
+                                    <span class="user-name text-success mb-0">User name</span>
+                                    <span class="activity mb-0"> user activity</span>
+                                    <span class="activity mb-0"> user target</span>
+                                </div>
+                                <span>time</span>
+                            </div>
+                        </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </aside>
+            <!-- Follow suggestion -->
+            <aside class="follow-suggestion-box p-3 bg-white">
+                <div>
+                    <span class="fw-bold"> Gợi ý theo dõi</span>
+                </div>
+                <div class="follow-suggestion-list">
+                    <div class="d-flex align-items-center justify-content-between">
+                        <div class="d-flex align-items-center" >
+                            <div class="flex-grow-1">
+                                <img class="rounded-circle" src="/images/avt.jpg" style="height: 42px" alt="avatar">
+                            </div>
+                            <div class="d-flex flex-column px-2">
+                                <span>Mèo đi hia</span>
+                                <span>@meodihia</span>
+                            </div>
+                        </div>
+                        <div class="">
+                            <button class="btn btn-primary rounded-pill">Theo dõi</button>
+                        </div>
+                    </div>
+                </div>
+            </aside>
+        </div>
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const menuItems = document.querySelectorAll('.menu-item a');
+            menuItems.forEach(item => {
+                item.addEventListener('click', () => {
+                    // Remove active class from all menu items
+                    menuItems.forEach(i => i.classList.remove('active'));
+
+                    // Add active class to the clicked menu item
+                    item.classList.add('active');
+                });
+            });
+            
+        });
+        document.getElementById('fileInput').addEventListener('change', function(event) {
+            const file = event.target.files[0];
+            if (file) {
+                const reader = new FileReader();
+                reader.onload = function(e) {
+                    const imagePreview = document.getElementById('imagePreview');
+                    imagePreview.src = e.target.result;
+                };
+                reader.readAsDataURL(file);
+            }
+        });
+        function toggleTomXu(tomxuID, eyeHiddenButton){
+            const tomXu = document.getElementById(tomxuID);
+            const isHidden = eyeHiddenButton.classList.contains("fa-eye");
+            if (isHidden){
+                const originalTomXu = tomXu.getAttribute('data-original-text');
+                tomXu.textContent = originalTomXu;
+                eyeHiddenButton.classList.remove("fa-eye");
+                eyeHiddenButton.classList.add("fa-eye-slash");
+            }else{
+                const tomXuText = tomXu.textContent;
+                const hiddenTomXu = '*'.repeat(tomXuText.length);
+                tomXu.textContent = hiddenTomXu;
+                eyeHiddenButton.classList.remove("fa-eye-slash");
+                eyeHiddenButton.classList.add("fa-eye");
+            }
+        }
+        const userData = [
+            { 
+                info: {
+                    userName: "Nguyễn Văn Huân", 
+                    id: "@HuanEnzie", 
+                    avt: "/images/avt.jpg"
+                },
+                post: {
+                    title:"aaaa",
+                    content:"ácascacs"
+                },
+                activities: {
+                    act:"aaaa",
+                    time: 29,
+                    target: "a"
+                },
+                action: {
+                    like: null,
+                    comment: null,
+                    share: null
+
+                },
+                tomxu: {
+                    xu: 1123.12,
+                    ác: ác
+                }
+            },
+        ];
+        const suggestionFollowerData = [
+            { 
+                info: {
+                    userName: "Nguyễn Văn Huân", 
+                    id: "@HuanEnzie", 
+                    avt: "/images/avt.jpg"
+                },
+                post: {
+                    title:"aaaa",
+                    content:"ácascacs"
+                }
+            },
+        ];
+        
+    </script>
+</body>
+</html>
