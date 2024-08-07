@@ -2,11 +2,11 @@ server:
   port: 8080
 
 spring:
-   datasource:
+  datasource:
     url: "jdbc:mysql://localhost:3306/test2"
     username: root
     password: 2309
-   jpa:
+  jpa:
     hibernate:
       ddl-auto: update
     show-sql: true
